@@ -1,3 +1,9 @@
+package familyTree;
+
+import familyTree.FamilyTree;
+import familyTree.Gender;
+import familyTree.Human;
+
 import java.time.LocalDate;
 
 public class Main {
@@ -13,6 +19,12 @@ public class Main {
         Human grandma = new Human(05,"Ирина",Gender.Female,LocalDate.of(1944,7,20));
         grandma.addChild(tree.getByName("Светлана"));
         tree.addHuman(grandma);
+        System.out.println(tree);
+        tree.sortByName();
+        System.out.println("Отсортированный список по имени: ");
+        System.out.println(tree);
+        tree.sortByBirthDate();
+        System.out.println("Отсортированный список по возрасту: ");
         System.out.println(tree);
     }
 

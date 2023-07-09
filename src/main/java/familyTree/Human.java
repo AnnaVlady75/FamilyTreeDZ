@@ -1,9 +1,11 @@
+package familyTree;
+
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Human {
+public class Human implements Comparable<Human>{
     private int id;
     private String name;
     private Gender gender;
@@ -157,15 +159,20 @@ public class Human {
     public String toString() {
         return getInfo();
     }
-//    @Override
-//    public boolean equals(Object obj){
-//        if (this == obj){
-//            return true;
-//        }
-//        if(!(obj instanceof Human)){
-//            return false;
-//        }
-//        Human human = (Human) obj;
-//        return human.getName().equals(getName());
-//    }
+    @Override
+    public boolean equals(Object obj){
+        if (this == obj){
+            return true;
+        }
+        if(!(obj instanceof Human)){
+            return false;
+        }
+        Human human = (Human) obj;
+        return human.getName().equals(getName());
+    }
+
+    @Override
+    public int compareTo(Human o) {
+        return name.compareTo(o.name);
+    }
 }
