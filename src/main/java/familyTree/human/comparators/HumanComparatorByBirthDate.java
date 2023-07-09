@@ -1,5 +1,5 @@
-package familyTree;
-import familyTree.Human;
+package familyTree.human.comparators;
+import familyTree.human.Human;
 import java.util.Comparator;
 
 public class HumanComparatorByBirthDate implements Comparator<Human> {

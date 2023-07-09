@@ -1,7 +1,7 @@
-package familyTree;
+package familyTree.human.comparators;
 
 import java.util.Comparator;
-import familyTree.Human;
+import familyTree.human.Human;
 
 public class HumanComparatorByName implements Comparator<Human> {
     @Override
